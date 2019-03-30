@@ -1,0 +1,19 @@
+Ejecutar los siguinetes comandos para instalar las dependencias y complementos 
+y el proyecto compilar bien
+
+
+npm i firebase @angular/fire --save             -->  instalacion de dos dependencias, firebase y angular fire2, sirve para hacer la conexion a firebase
+
+
+
+
+
+
+
+
+
+
+
+
+
+

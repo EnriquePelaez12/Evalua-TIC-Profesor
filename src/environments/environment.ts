@@ -5,6 +5,15 @@
 export const environment = {
   production: false
 };
+export const firebaseConfig = {
+  apiKey: "AIzaSyBjDImpuj0BjsKFbKGaPDRe5RlmVpyqeZc",
+    authDomain: "login-evalua.firebaseapp.com",
+    databaseURL: "https://login-evalua.firebaseio.com",
+    projectId: "login-evalua",
+    storageBucket: "login-evalua.appspot.com",
+    messagingSenderId: "286332532699"
+};
+
 
 /*
  * For easier debugging in development mode, you can import the following file
