@@ -12,11 +12,11 @@ import { NavController, LoadingController } from '@ionic/angular';
 export class RegistroPage implements OnInit {
 
   todo: AlumnoInterface = {
-    carrera:  '',
-    nombre: '',
-    apellido:  '',
-    grado: '',
-    matricula:  ''
+    nombreC: '',
+    materiasIn:  '',
+    correo: '',
+    matricula:  '',
+    titulo: ''
   };
   todoId = null;
   constructor(private route: ActivatedRoute, 

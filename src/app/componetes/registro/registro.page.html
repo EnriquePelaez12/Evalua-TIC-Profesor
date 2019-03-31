@@ -13,24 +13,24 @@
     <img class="icon"  src="assets/icon/perfil.png" alt="">
 
   <ion-item *ngIf="todo">
-    <ion-label position="floating" > Correra</ion-label>
-    <ion-input type="text" [(ngModel)]="todo.carrera" name="carrera"></ion-input>
+    <ion-label position="floating" > Nombre completo</ion-label>
+    <ion-input type="text" [(ngModel)]="todo.nombreC" name="nombreC"></ion-input>
   </ion-item>
 <ion-item *ngIf="todo">
-  <ion-label position="floating" > Nombre</ion-label>
-  <ion-input type="text" [(ngModel)]="todo.nombre" name="nombre"></ion-input>
+  <ion-label position="floating" >Titulado en:</ion-label>
+  <ion-input type="text" [(ngModel)]="todo.titulo" name="titulo"></ion-input>
 </ion-item>
 <ion-item *ngIf="todo">
-  <ion-label position="floating" > Apellido</ion-label>
-  <ion-input [(ngModel)]="todo.apellido" type="text" name="apellido"></ion-input>
-</ion-item>
-<ion-item *ngIf="todo">
-  <ion-label position="floating" > Grado y Grupo</ion-label>
-  <ion-input type="text" [(ngModel)]="todo.grado" name="grado"></ion-input>
+  <ion-label position="floating" > Materias Inpartidas</ion-label>
+  <ion-input [(ngModel)]="todo.materiasIn" type="text" name="materiasIn"></ion-input>
 </ion-item>
 <ion-item *ngIf="todo">
     <ion-label position="floating" > Matricula</ion-label>
     <ion-input type="matricula" [(ngModel)]="todo.matricula" name="matricula"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="todo">
+    <ion-label position="floating" > correo electronico</ion-label>
+    <ion-input type="text" [(ngModel)]="todo.correo" name="correo"></ion-input>
   </ion-item>
 
 <br>
