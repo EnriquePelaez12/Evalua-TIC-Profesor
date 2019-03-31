@@ -1,3 +1,4 @@
+import { AuthService } from './../../../servicios/auth.service';
 import { NavController, LoadingController } from '@ionic/angular';
 import { PooService } from './../../../servicios/poo.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,7 +16,8 @@ export class PreguntasPage implements OnInit {
   constructor(
     private pooService: PooService,
     private nav: NavController,
-    private loadingController: LoadingController) { }
+    private loadingController: LoadingController,
+    public authservice : AuthService) { }
 
   ngOnInit(){
     this.loadTodo();//se manda a llamar todo el proceso para que aparesca el grid de cargando
@@ -34,6 +36,10 @@ export class PreguntasPage implements OnInit {
     
     });
   }
+  OnLogout(){
+    this.authservice.logout();
+  }
+
 
 
 }

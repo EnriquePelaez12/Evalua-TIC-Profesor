@@ -12,7 +12,7 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Inicio',
-      url: '/home',
+      url: '/preguntas',
       icon: 'home'
     },
     {
