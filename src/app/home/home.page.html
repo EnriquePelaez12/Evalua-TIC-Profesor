@@ -1,15 +1,22 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
       Evalua-TIC
     </ion-title>
-  </ion-toolbar>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-button (click)="OnLogout()">Salir</ion-button>
-  
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/details" routerDirection="forward">
+      <ion-icon name="exit"></ion-icon>
+
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

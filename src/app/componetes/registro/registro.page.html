@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Perfil de Alumno
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  padding >
+    <img class="icon"  src="assets/icon/perfil.png" alt="">
+
+  <ion-item *ngIf="todo">
+    <ion-label position="floating" > Correra</ion-label>
+    <ion-input type="text" [(ngModel)]="todo.carrera" name="carrera"></ion-input>
+  </ion-item>
+<ion-item *ngIf="todo">
+  <ion-label position="floating" > Nombre</ion-label>
+  <ion-input type="text" [(ngModel)]="todo.nombre" name="nombre"></ion-input>
+</ion-item>
+<ion-item *ngIf="todo">
+  <ion-label position="floating" > Apellido</ion-label>
+  <ion-input [(ngModel)]="todo.apellido" type="text" name="apellido"></ion-input>
+</ion-item>
+<ion-item *ngIf="todo">
+  <ion-label position="floating" > Grado y Grupo</ion-label>
+  <ion-input type="text" [(ngModel)]="todo.grado" name="grado"></ion-input>
+</ion-item>
+<ion-item *ngIf="todo">
+    <ion-label position="floating" > Matricula</ion-label>
+    <ion-input type="matricula" [(ngModel)]="todo.matricula" name="matricula"></ion-input>
+  </ion-item>
+
+<br>
+<ion-button  routerLink="/list" expand="block" (click)="saveTodo()">Guardar</ion-button>
+</ion-content>
+ 

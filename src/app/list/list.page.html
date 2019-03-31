@@ -1,27 +1,55 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Perfil de Alumno
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+<ion-content id="alumnos" padding  *ngFor="let alumno of alumnos; index as i">
+    <img class="icon"  src="assets/icon/perfil.png" alt="">
+ 
+    <br>
+    <br>
+    <ion-row class="alineacion">
+        <ion-col>
+            {{alumno.apellido}}
+            </ion-col>
+      </ion-row>
+      <br>
+    <ion-row class="alineacion">
+        <ion-col>
+            {{alumno.nombre}} 
+        
+            </ion-col>
+      </ion-row>
+      <br>
+      <ion-row class="alineacion">
+          <ion-col>
+              {{alumno.matricula}}        
+              </ion-col>
+        </ion-row>
+        <br>
+        <ion-row class="alineacion">
+            <ion-col>
+                {{alumno.carrera}}          
+                </ion-col>
+          </ion-row>
+          <br>
+          <ion-row class="alineacion">
+              <ion-col>
+                  {{alumno.grado}}
+                </ion-col>
+            </ion-row>
+            <br>
+
+<br>
+<ion-button [routerLink]="['/registro', alumno.id]" class="dark" expand="block">
+  Perfil
+</ion-button>
 </ion-content>
+ 
+

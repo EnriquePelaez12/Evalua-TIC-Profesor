@@ -17,7 +17,11 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'login', loadChildren: './componetes/login/login.module#LoginPageModule', canActivate: [NologinGuard]}
+  { path: 'login', loadChildren: './componetes/login/login.module#LoginPageModule', canActivate: [NologinGuard]},
+  { path: 'registro/:id', loadChildren: './componetes/registro/registro.module#RegistroPageModule' },
+  { path: 'registro', loadChildren: './componetes/registro/registro.module#RegistroPageModule' },  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' }
+
+
 ];
 
 @NgModule({
