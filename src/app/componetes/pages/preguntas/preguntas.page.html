@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Perfil de Alumno
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item-sliding *ngFor="let poo of poos">
+        <ion-item lines="inset" button [routerLink]="['/details-preguntas', poo.id]">
+          <ion-label>
+            {{ poo.pregunta }}
+          </ion-label>
+          <ion-note slot="end" color="primary">{{ poo.respuesta }}</ion-note>
+        </ion-item>
+      </ion-item-sliding>
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+          <ion-fab-button routerLink="/details-preguntas" routerDirection="forward">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>
+        Añadir nueva Pregunta
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-list lines="full">
+
+     
+        <ion-label>Pregunta:</ion-label>
+      <ion-item *ngIf="poo">
+          <ion-textarea 
+          rows="6" 
+          cols="20" 
+          placeholder="Escribe tu pregunta aquí..."    
+          name="pregunta" 
+          [(ngModel)]="poo.pregunta">
+        </ion-textarea>
+        </ion-item>
+
+        <ion-label> Respuesta: </ion-label>
+      <ion-item *ngIf="poo">
+          <ion-textarea rows="6" cols="20"   name="respuesta" [(ngModel)]="poo.respuesta"></ion-textarea>
+      </ion-item>
+
+    </ion-list>
+    <ion-button expand="full" (click)="saveTodo()">Save</ion-button>
+    </ion-card>
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+        <ion-fab-button color="danger" (click)="onRemoveTodo(todoId)" routerLink="/" routerDirection="forward">
+            <ion-icon name="trash"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+
+  </ion-content>
