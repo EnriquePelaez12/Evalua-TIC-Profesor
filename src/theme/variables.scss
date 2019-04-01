@@ -46,12 +46,19 @@
   --ion-color-warning-tint: #ffd31a;
 
   /** danger **/
-  --ion-color-danger: #f04141;
+  --ion-color-danger:  linear-gradient(to bottom, #fc9c9c, #e00000 50%, #fc9c9c); 
   --ion-color-danger-rgb: 245, 61, 61;
   --ion-color-danger-contrast: #ffffff;
   --ion-color-danger-contrast-rgb: 255, 255, 255;
   --ion-color-danger-shade: #d33939;
   --ion-color-danger-tint: #f25454;
+
+
+
+  //Boton Eliminar
+ // --ion-color-btndelete:  linear-gradient(to bottom, #f04141, #fc9c9c 50%, #f04141); 
+
+  
 
   /** dark **/
   --ion-color-dark: #222428;
