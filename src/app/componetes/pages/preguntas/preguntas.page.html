@@ -3,30 +3,32 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Perfil de Alumno
-    </ion-title>
+    <ion-title class="col">
+        EVALUA-TIC
+          </ion-title>
     <ion-button (click)="OnLogout()" color="dark" slot="end">
         <ion-icon  name="exit"></ion-icon>
       </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content color="success">
+  <ion-card class="bg">
+      <ion-card-header class="titulo">
+          <ion-card-title>Lista de Preguntas</ion-card-title>
+        </ion-card-header>
+  </ion-card>
+    <ion-card color="success">
     <ion-item-sliding *ngFor="let poo of poos">
-        <ion-item lines="inset" button [routerLink]="['/details-preguntas', poo.id]">
-          <ion-label>
+        <ion-item  class="bg" lines="inset" button [routerLink]="['/details-preguntas', poo.id]">
+          <ion-label >
             {{ poo.pregunta }}
           </ion-label>
-          <ion-note slot="end" color="primary">{{ poo.respuesta }}</ion-note>
         </ion-item>
       </ion-item-sliding>
 
-      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-          <ion-fab-button routerLink="/details-preguntas" routerDirection="forward">
-            <ion-icon name="add"></ion-icon>
-          </ion-fab-button>
-        </ion-fab>
+      </ion-card>
+<br>       
+      <ion-button color="warning"  routerLink="/details-preguntas" expand="block" >Nueva Pregunta</ion-button>
 
 </ion-content>

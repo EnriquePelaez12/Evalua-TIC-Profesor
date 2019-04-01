@@ -3,28 +3,35 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Perfil del Profesor
+    <ion-title class="col">
+        EVALUA-TIC
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<!--
+      Perfil del Profesor-->
 
-<ion-content  padding >
-    <img class="icon"  src="assets/icon/perfil.png" alt="">
-
-  <ion-item *ngIf="todo">
+<ion-content color="success" padding >
+  <ion-card class="bg">
+      <ion-card-header>
+          <ion-card-title  class="titulo">PROFESOR</ion-card-title>
+        </ion-card-header>
+  </ion-card>
+  <ion-card  color="dark">
+    <img class="icon"  src="assets/icon/ut.png" alt="">
+  <ion-item  *ngIf="todo">
     <ion-label position="floating" > Nombre completo</ion-label>
     <ion-input type="text" [(ngModel)]="todo.nombreC" name="nombreC"></ion-input>
   </ion-item>
-<ion-item *ngIf="todo">
+<ion-item *ngIf="todo" >
   <ion-label position="floating" >Titulado en:</ion-label>
   <ion-input type="text" [(ngModel)]="todo.titulo" name="titulo"></ion-input>
 </ion-item>
-<ion-item *ngIf="todo">
+<ion-item *ngIf="todo" >
   <ion-label position="floating" > Materias Inpartidas</ion-label>
   <ion-input [(ngModel)]="todo.materiasIn" type="text" name="materiasIn"></ion-input>
 </ion-item>
-<ion-item *ngIf="todo">
+<ion-item *ngIf="todo" >
     <ion-label position="floating" > Matricula</ion-label>
     <ion-input type="matricula" [(ngModel)]="todo.matricula" name="matricula"></ion-input>
   </ion-item>
@@ -32,8 +39,7 @@
     <ion-label position="floating" > correo electronico</ion-label>
     <ion-input type="text" [(ngModel)]="todo.correo" name="correo"></ion-input>
   </ion-item>
-
-<br>
-<ion-button  routerLink="/list" expand="block" (click)="saveTodo()">Guardar</ion-button>
+</ion-card>
+<ion-button color="warning"  routerLink="/list" expand="block" (click)="saveTodo()">Guardar</ion-button>
 </ion-content>
  

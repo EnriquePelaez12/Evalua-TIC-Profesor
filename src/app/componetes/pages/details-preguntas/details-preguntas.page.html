@@ -1,21 +1,21 @@
 <ion-header>
     <ion-toolbar color="dark">
-      <ion-title>
-        Añadir nueva Pregunta
+      <ion-title   class="col">
+          EVALUA-TIC
       </ion-title>
     </ion-toolbar>
   </ion-header>
-
-
-
-<ion-content padding>
-  <ion-card>
-
-    <ion-list lines="full">
-
+<ion-content padding color="success">
+    <ion-card class="bg">
+        <ion-card-header class="titulo">
+            <ion-card-title>Nueva Pregunta</ion-card-title>
+          </ion-card-header>
+    </ion-card>
+  <ion-card >
+    <ion-list color="success" lines="full">
      
-        <ion-label>Pregunta:</ion-label>
-      <ion-item *ngIf="poo">
+        <ion-label >Pregunta:</ion-label>
+      <ion-item  *ngIf="poo">
           <ion-textarea 
           rows="6" 
           cols="20" 
@@ -31,15 +31,18 @@
       </ion-item>
 
     </ion-list>
-    <ion-button expand="full" (click)="saveTodo()">Save</ion-button>
     </ion-card>
 
 
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
-        <ion-fab-button color="danger" (click)="onRemoveTodo(todoId)" routerLink="/" routerDirection="forward">
-            <ion-icon name="trash"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-
+    <ion-button color="warning"  routerLink="/preguntas" expand="block" (click)="saveTodo()">Guardar</ion-button>
+<br>
+    <ion-button color="danger" routerLink="/preguntas" expand="block" (click)="onRemoveTodo(todoId)">Eliminar</ion-button>
 
   </ion-content>
+
+  <!--   <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="success">
+      <ion-fab-button color="primary" (click)="saveTodo()"  routerLink="/" routerDirection="forward">
+          <ion-icon name="save"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+-->

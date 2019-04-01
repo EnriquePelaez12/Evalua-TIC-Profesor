@@ -6,13 +6,13 @@ import { NologinGuard } from './guards/nologin.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'preguntas',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: './home/home.module#HomePageModule', canActivate: [AuthGuard]
-  },
+//  {
+  //  path: 'home',
+    //loadChildren: './home/home.module#HomePageModule', canActivate: [AuthGuard]
+ // },
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
@@ -22,7 +22,9 @@ const routes: Routes = [
   { path: 'registro', loadChildren: './componetes/registro/registro.module#RegistroPageModule' },
   { path: 'preguntas', loadChildren: './componetes/pages/preguntas/preguntas.module#PreguntasPageModule' },
   { path: 'details-preguntas/:id', loadChildren: './componetes/pages/details-preguntas/details-preguntas.module#DetailsPreguntasPageModule' },
-  { path: 'details-preguntas', loadChildren: './componetes/pages/details-preguntas/details-preguntas.module#DetailsPreguntasPageModule' }
+  { path: 'details-preguntas', loadChildren: './componetes/pages/details-preguntas/details-preguntas.module#DetailsPreguntasPageModule' },
+  { path: 'resultados', loadChildren: './componetes/pages/resultados/resultados.module#ResultadosPageModule' }
+
 
 
 ];

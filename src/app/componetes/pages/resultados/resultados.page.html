@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="col">
+     Resultados
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="success">
+  <ion-card *ngFor="let poo of poos">
+        <ion-item color="light">
+            <ion-label text-wrap>
+                {{poo.pregunta}}
+            </ion-label>
+          </ion-item>
+    <ion-item >
+        <ion-label> ALUMNO: {{poo.rnull}}</ion-label>
+      </ion-item>
+      <ion-item >
+          <ion-label>MAESTRO: {{poo.respuesta}}</ion-label>
+        </ion-item>
+  </ion-card>
+</ion-content>
+
+

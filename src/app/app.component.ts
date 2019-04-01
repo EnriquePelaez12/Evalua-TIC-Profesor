@@ -18,6 +18,11 @@ export class AppComponent {
     {
       title: 'Perfil',
       url: '/list',
+      icon: 'person'
+    },
+    {
+      title: 'Resultados',
+      url: '/resultados',
       icon: 'list'
     }
   ];

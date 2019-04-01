@@ -2,7 +2,7 @@ import { PooService } from './../../../servicios/poo.service';
 import { Component, OnInit } from '@angular/core';
 import { InterfacePOO } from 'src/app/models/pregunta';
 import { ActivatedRoute} from '@angular/router';
-import { NavController, LoadingController } from '@ionic/angular';
+import { NavController, LoadingController, AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -14,6 +14,7 @@ export class DetailsPreguntasPage implements OnInit {
 
   poo:InterfacePOO = {
     pregunta: '',
+    rnull:'',
     respuesta: ''
   };
   
@@ -23,7 +24,8 @@ export class DetailsPreguntasPage implements OnInit {
     private route: ActivatedRoute,
     private nav: NavController,
     private todoService: PooService, 
-    private loadingController: LoadingController) { }
+    private loadingController: LoadingController,
+    private alertCtrl: AlertController) { }
 
   ngOnInit() {
     this.todoId = this.route.snapshot.params['id'];
@@ -31,6 +33,8 @@ export class DetailsPreguntasPage implements OnInit {
       this.loadTodo();
     }
   }
+
+ 
 
   async loadTodo(){
     const loading = await this.loadingController.create({
